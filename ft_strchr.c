@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 20:16:24 by jcheng            #+#    #+#             */
-/*   Updated: 2022/05/29 20:40:23 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/04 23:05:20 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,19 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0' && *s != c)
+	char	x;
+
+	x = (char)c;
+	while (*s != '\0' && *s != x)
 		s++;
-	if (*s == c)
+	if (*s == x)
 		return ((char *)s);
 	return (0);
 }
 
-int	main(void)
-{
-	int		c = 'g';
-	char	*str = "asdfghjkl";
-	printf("%s\n", ft_strchr(str,c));
-}
+// int	main(void)
+// {
+// 	int		c = 'g';
+// 	char	*str = "asdfghjkl";
+// 	printf("%s\n", ft_strchr(str,c));
+// }

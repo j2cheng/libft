@@ -6,13 +6,11 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 17:52:15 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/01 20:59:48 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/04 22:35:56 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {
@@ -31,11 +29,11 @@ void	*ft_memset(void *b, int c, size_t len)
 	return (str);
 }
 
-int	main(void)
-{
-	unsigned char	b[] = "hj";
-	unsigned char	c = 'f';
-	size_t	len = 4;
+// int	main(void)
+// {
+// 	unsigned char	b[] = "hjdx";
+// 	unsigned char	c = 'f';
+// 	size_t	len = 12;
 
-	printf ("output:%s\n", ft_memset(b, c, len));
-}
+// 	printf ("output:%s\n", ft_memset(b, c, len));
+// }

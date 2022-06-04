@@ -3,29 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcheng <jcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
+/*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 14:22:34 by jcheng            #+#    #+#             */
-/*   Updated: 2022/05/22 15:38:09 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/04 21:59:54 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_isprint(unsigned char x)
 {
-	if (x >= 40 && x <= 176)
+	if (x >= 32 && x <= 126)
 		return (1);
 	else
 		return (0);
 }
 
-int	main(void)
-{
-	unsigned char	c;
+// int	main(void)
+// {
+// 	unsigned char	c;
 
-	c = 1;
-	printf("output: %d\n", ft_isprint(c));
-}
+// 	c = '4';
+// 	printf("output: %d\n", ft_isprint(c));
+// }

@@ -3,18 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcheng <jcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
+/*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 15:22:49 by jcheng            #+#    #+#             */
-/*   Updated: 2022/05/22 15:35:25 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/04 22:08:31 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	i;
 
@@ -24,9 +22,9 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-int	main(void)
-{
-	char	str[] = "asdfg";
+// int	main(void)
+// {
+// 	char	str[] = "asdfg";
 
-	printf("count:%d\n", ft_strlen(str));
-}
+// 	printf("count:%d\n", ft_strlen(str));
+// }
