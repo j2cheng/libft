@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 14:20:09 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/06 16:46:46 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/06 17:41:20 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 			i++;
 		}
 	}
-	// else if (size < src_len + 1)
-	// {
-	// 	while (i < (size - 1))
-	// 	{
-	// 		*(dst + i) = *(src + i);
-	// 		i++;
-	// 	}
-	// }
 	*(dst + i) = '\0';
 	return (src_len);
 }
@@ -53,5 +45,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 // 	printf("output:%zu\n", ft_strlcpy(dest, source, x));
 // 	printf("destination:%s\n", dest);
 // 	printf("src  		: %s\n", source);
-	
 // }
