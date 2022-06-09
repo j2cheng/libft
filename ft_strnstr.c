@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 20:04:08 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/06 22:52:19 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/09 22:12:05 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,42 +14,41 @@
 
 char	*ft_strnstr(const char *str, const char *find, size_t len)
 {
-	size_t	i;
+//	size_t	i;
 	size_t	find_len;
 	
-	i = 0;
+//	i = 0;
 	find_len = ft_strlen(find);
 
-	if (find_len == 0)
+	if (find_len == 0 || !(char *)find)
 		return ((char *)str);
-	while (*(str + i) != '\0')
+	if (len == 0)
+		return (NULL);
+	while (*str != '\0' && find_len <= len)
 	{
-		if (ft_memcmp(str, find, len) != 0 && i < len)
-			i++;
+		if (ft_memcmp(str, find, find_len) == 0)
+			return ((char *)(str));
+		str++;
+		len--;
 	}
-
-
-	printf("i = %zu\n", i);
-	return ((char *)(str + i));
+	return (NULL);
 }
 
+//you have to len-- because every time you  str++, i moves forward by one. so, that reduces the # of characters that it needs to scan through
+//if (ft_memcmp((char *)str, (char *)find, find_len) == 0)
 
-int	main(void)
-{
-	char 	*haystack = "42 offers a motivational and entertaining environment";
-	char 	*needle = "offers";
-	size_t	x = 12;
-	printf("%s\n", ft_strnstr(haystack, needle, x));
-}
+// int	main(void)
+// {
+// 	char 	*haystack = "42 offers a motivational and entertaining environment";
+// 	char 	*needle = "a";
+// 	size_t	x = 100;
+// 	printf("%s\n", ft_strnstr(haystack, needle, x));
+// }
 
-
-	// if ( *(find + i) == "\0" && i < len)
-	// 	return (&str);
-	// if ( *(find + i) == "" && i < len)
-	// 	return (NULL);
-	// while (*(find + i) == *(str + i) && *(find + i) != '\0' && i < len)
-	// {
-	// 	write (1, &str[i], 1);
-	// 	i++;
-	// }
-	// return (&str);
+// int	main(void)
+// {
+// 	char haystack[30] = "aaabcabcd";
+// 	//char needle[10] = "aabc";
+// 	char *x = ft_strnstr(haystack, "cd", 9);
+// 	printf("%s\n", x);
+// }
