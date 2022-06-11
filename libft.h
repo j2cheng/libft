@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 21:29:52 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/11 12:57:16 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/11 13:44:01 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		ft_isalpha(int c);
 int		ft_isdigit(int x);
 int		ft_isalnum(int c);
 int		ft_isascii(int x);
-int		ft_isprint(unsigned char x);
+int		ft_isprint(int x);
 int		ft_strlen(const char *str);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);

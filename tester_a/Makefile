@@ -6,7 +6,7 @@
 #    By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/04/04 19:22:36 by alelievr          #+#    #+#              #
-#    Updated: 2022/06/11 13:10:38 by jcheng           ###   ########.fr        #
+#    Updated: 2022/06/11 13:14:10 by jcheng           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 #################
 
 #	Libft Makefile path
-LIBFTDIR	=	/Users/jcheng/core/libft/tester_a
+LIBFTDIR	=	/Users/jcheng/core/libft/
 
 #	Sources
 SRCDIR		=	./
