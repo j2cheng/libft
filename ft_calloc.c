@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/05 15:08:58 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/11 16:02:34 by jcheng           ###   ########.fr       */
+/*   Created: 2022/06/11 15:35:43 by jcheng            #+#    #+#             */
+/*   Updated: 2022/06/11 16:40:13 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_calloc(size_t count, size_t size)
 {
-	ft_memset(s, 0, n);
+	char	*str;
+	int		i;
+	
+	i = 0;
+	str = malloc (count * size);
+	if (count >= SIZE_MAX || size >= SIZE_MAX)
+		return (NULL);
+	if (!str)
+		return (NULL);
+	if (str[i] != '\0')
+		ft_bzero(str, count * size);
+	return (str);
 }
-
-// 
-// 	size_t			i;
-// 	unsigned char	*str;
-
-// 	i = 0;
-// 	str = (unsigned char *)s;
-// 	while (i < n)
-// 	*(str + i)	= '\0';
-// 	i++;
-// }
-
-// int	main(void)
-// {
-// 		unsigned char	s[] = "fghj";
-// 		size_t			n = 9;
-// 		ft_bzero(s, n);
-// 		printf("output:%s\n", s);
-// }
