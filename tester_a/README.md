@@ -69,4 +69,3 @@ so:
 
 ### Benchmark mode
 ![Benchmarking](https://user-images.githubusercontent.com/6877923/73292576-91b2bf80-4202-11ea-8e33-2a1fc22bc2cc.png)
-

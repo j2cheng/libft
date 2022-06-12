@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/22 15:22:49 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/12 17:31:21 by jcheng           ###   ########.fr       */
+/*   Created: 2022/06/12 17:56:45 by jcheng            #+#    #+#             */
+/*   Updated: 2022/06/12 17:59:46 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	i;
+	int	i; 
 
-	i = 0;
-	while (str[i] != '\0')
+	i = '0';
+	while (i <= 9)
+	{
+		write (fd, &n, 1);
 		i++;
-	return (i);
+	}
 }
-
-// int	main(void)
-// {
-// 	char	str[] = "asdfg";
-
-// 	printf("count:%d\n", ft_strlen(str));
-// }

@@ -6,12 +6,11 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 14:20:09 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/06 17:41:20 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/12 10:50:23 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
