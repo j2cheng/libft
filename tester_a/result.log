@@ -100,7 +100,7 @@ Diffs:
      ft_atoi: |469762049|
 
 ft_calloc:     [OK] [OK] [OK] [OK] [OK] 
-ft_strdup:     [MISSING]
+ft_strdup:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_substr:     [MISSING]
 ft_strjoin:    [MISSING]
 ft_strtrim:    [MISSING]

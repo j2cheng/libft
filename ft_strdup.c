@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/22 15:22:49 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/12 10:10:25 by jcheng           ###   ########.fr       */
+/*   Created: 2022/06/11 16:44:00 by jcheng            #+#    #+#             */
+/*   Updated: 2022/06/12 10:36:57 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+char	*ft_strdup(const char *s1)
 {
-	int	i;
+	char	*new;
+	int		i;
 
+	new = malloc (sizeof(char) * ft_strlen(s1) + 1);
 	i = 0;
-	while (str[i] != '\0')
+	if (!new)
+		return (NULL);
+	while (*(s1 + i) != '\0')
+	{
+		*(new + i) = *(s1 + i);
 		i++;
-	return (i);
+	}
+	*(new + i) = '\0';
+	return (new);
 }
 
 // int	main(void)
 // {
-// 	char	str[] = "asdfg";
-
-// 	printf("count:%d\n", ft_strlen(str));
+// 	char	*str = "asjfnn";
+// 	printf("%s\n", ft_strdup(str));
 // }

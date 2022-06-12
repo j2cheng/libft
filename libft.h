@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 21:29:52 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/11 16:40:20 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/12 10:36:56 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ char	*ft_strnstr(const char *str, const char *find, size_t len);
 int		ft_atoi(const char *str);
 
 void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *s1);
 
 #endif
