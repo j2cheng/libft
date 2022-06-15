@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 20:16:24 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/14 22:57:46 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/15 19:33:19 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ char	*ft_strchr(const char *s, int c)
 	return (0);
 }
 
-int	main(void)
-{
-	int		c = 'g';
-	char	*str = "asdfghjkl";
-	printf("%s\n", ft_strchr(str,c));
-}
+// int	main(void)
+// {
+// 	int		c = 'g';
+// 	char	*str = "asdfghjkl";
+// 	printf("%s\n", ft_strchr(str,c));
+// }

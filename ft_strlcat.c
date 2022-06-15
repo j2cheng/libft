@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 15:30:45 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/14 18:28:02 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/15 22:16:39 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (0);
 }
 
-int	main (void)
-{
-	char	dst[30] = "abcdefgh";
-	char	src[20] = "hellohellohello";
-	size_t	x;
+// int	main (void)
+// {
+// 	char	dst[30] = "abcdefgh";
+// 	char	src[20] = "hellohellohello";
+// 	size_t	x;
 
-	x = 50;
-	printf("output:%zu\n", ft_strlcat(dst, src, x));
-}
+// 	x = 50;
+// 	printf("output:%zu\n", ft_strlcat(dst, src, x));
+// }
 
 
 //strlen doesn't count the null terminator. so that is why we are adding 1 to the destination length. 
