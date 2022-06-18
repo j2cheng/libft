@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/12 17:53:30 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/18 14:06:59 by jcheng           ###   ########.fr       */
+/*   Created: 2022/06/18 13:23:47 by jcheng            #+#    #+#             */
+/*   Updated: 2022/06/18 13:46:48 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	i; 
+	char	*new_string;
+	size_t	i;
 
-	i = 0;
-	if (!s)
-		return ;
-	while (s[i] != '\0')
+	if (!s || !f)
+		return (NULL);
+	new_string = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (s)
 	{
-		write (fd, &s[i], 1);
-		i++;
+		i = 0;
+		if (!new_string)
+			return (NULL);
+		while (i < ft_strlen(s))
+		{
+			new_string[i] = f(i, s[i]);
+			i++;
+		}
+		new_string[i] = '\0';
+		return (new_string);
 	}
-	write(fd, "\n", 1);
+	return (NULL);
 }
