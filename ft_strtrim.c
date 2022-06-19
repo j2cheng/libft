@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/14 21:35:52 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/15 22:39:52 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/19 23:13:00 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		while (ft_strchr(set, s1[size_x]))
 		size_x--;
 	}
-
 	newstring = ft_substr((char *)s1, 0, size_x + 1);
 	return (newstring);
 }

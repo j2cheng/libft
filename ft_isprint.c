@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 14:22:34 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/11 13:43:54 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/19 23:08:45 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ int	ft_isprint(int x)
 	if (x >= 32 && x <= 126)
 		return (1);
 	return (0);
-	// else
-	// 	return (0);
 }
 
 // int	main(void)

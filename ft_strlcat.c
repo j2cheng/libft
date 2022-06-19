@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 15:30:45 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/15 22:16:39 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/19 23:11:14 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	j = 0;
 	dest_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
-//	if (size == 0)
-//		return(src_len);
 	if (size < dest_len + 1)
 		return (size + src_len);
 	if (size >= dest_len + 1)
@@ -40,8 +38,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		*(dst + i) = '\0';
 		return (dest_len + src_len);
 	}
-	// else
-	// 	return(size + src_len);
 	return (0);
 }
 

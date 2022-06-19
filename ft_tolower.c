@@ -6,13 +6,13 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 20:24:17 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/04 22:42:02 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/19 23:11:57 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int	c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c = c + 32;

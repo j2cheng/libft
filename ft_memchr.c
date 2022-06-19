@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 20:51:01 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/04 23:05:45 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/19 23:09:05 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t				i;
+	size_t			i;
 	unsigned char	*str;
 	unsigned char	x;
 

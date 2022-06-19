@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 20:04:08 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/14 21:35:19 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/19 23:11:44 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 char	*ft_strnstr(const char *str, const char *find, size_t len)
 {
-//	size_t	i;
 	size_t	find_len;
-	
-//	i = 0;
-	find_len = ft_strlen(find);
 
+	find_len = ft_strlen(find);
 	if (find_len == 0 || !(char *)find)
 		return ((char *)str);
 	if (len == 0)
@@ -34,7 +31,8 @@ char	*ft_strnstr(const char *str, const char *find, size_t len)
 	return (NULL);
 }
 
-//you have to len-- because every time you  str++, i moves forward by one. so, that reduces the # of characters that it needs to scan through
+//you have to len-- because every time you  str++, i moves forward by one. 
+//so, that reduces the # of characters that it needs to scan through
 //if (ft_memcmp((char *)str, (char *)find, find_len) == 0)
 
 // int	main(void)
