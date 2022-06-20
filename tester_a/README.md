@@ -7,7 +7,7 @@ libft-unit-test is a complete testing suite for 42's libft project, allowing you
 # Installation
 You must have the following file structure:
 ```
-.
+
 |- libft/
 |- libft-unit-tests/
 ```
