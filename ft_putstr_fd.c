@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/12 17:48:04 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/18 14:06:15 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/24 21:56:10 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i; 
+	int	i;
 
 	i = 0;
-	if(!s)
+	if (!s)
 		return ;
 	while (s[i] != '\0')
 	{

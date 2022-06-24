@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 14:20:09 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/12 10:50:23 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/24 21:57:03 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	src_len;
-	// size_t	dst_len;
 
 	src_len = ft_strlen(src);
-	// dst_len = ft_strlen(dst);
 	i = 0;
 	if (size == 0)
 		return (src_len);

@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 15:30:45 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/19 23:11:14 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/24 21:58:09 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 // 	printf("output:%zu\n", ft_strlcat(dst, src, x));
 // }
 
-
-//strlen doesn't count the null terminator. so that is why we are adding 1 to the destination length. 
-//did not -1 to size, as if size = 0, then size will start with -1. because of the data type of size_t, then it return to the other end of the string
+//strlen doesn't count the null terminator. 
+// so that is why we are adding 1 to the destination length. 
+// did not -1 to size, as if size = 0, then size will start with -1.
+// because of the data type of size_t, 
+// then it return to the other end of the string
