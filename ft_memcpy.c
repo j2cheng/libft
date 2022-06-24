@@ -6,7 +6,7 @@
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 22:47:17 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/19 23:14:57 by jcheng           ###   ########.fr       */
+/*   Updated: 2022/06/24 20:40:35 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	source = (unsigned char *)src;
 	dest = (unsigned char *)dst;
+	if(!source && !dest)
+		return(NULL);
 	while (i < n)
 	{
 		*(dest + i) = *(source + i);
@@ -41,7 +43,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 // 	i = 4;
 // 	printf("%s\n", ft_memcpy(dest, source, i));
 // }
-
 
 /*
 int	main(void)

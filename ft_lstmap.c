@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcheng <jcheng@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 17:52:15 by jcheng            #+#    #+#             */
-/*   Updated: 2022/06/23 22:18:17 by jcheng           ###   ########.fr       */
+/*   Created: 2022/06/23 21:11:02 by jcheng            #+#    #+#             */
+/*   Updated: 2022/06/24 20:04:39 by jcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t			i;
-	unsigned char	*str;
+	t_list	*new;
+	t_list	*new_lst;
 
-	i = 0;
-	str = (unsigned char *)b;
-	while (i < len)
-	{
-		*(str + i) = ((unsigned char) c);
-		i++;
+	if (lst == NULL)
+		return (NULL);
+	new_lst = 0;
+	while (lst)
+	{	
+		new = ft_lstnew(f(lst->content));
+		if (new == NULL)
+		{
+			ft_lstclear(&new, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new_lst, new);
+		lst = lst->next;
 	}
-	return (str);
+	return (new_lst);
 }
-
-// int	main(void)
-// {
-// 	unsigned char	b[] = "hjdx";
-// 	unsigned char	c = 'f';
-// 	size_t	len = 12;
-
-// 	printf ("output:%s\n", ft_memset(b, c, len));
-// }

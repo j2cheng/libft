@@ -1,28 +1,8 @@
-ft_memset:     [OK] [OK] [OK] [NO CRASH] [OK] [OK] [OK] 
-[no crash]: your memset does not segfault when null parameter is sent !
-Test code:
-	ft_memset(((void *)0), 'a', 12);
-
-
-ft_bzero:      [OK] [OK] [NO CRASH] [OK] 
-[no crash]: your bzero does not segfault when null params is sent
-Test code:
-	ft_bzero(((void *)0), 0x12);
-
-
-ft_memcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [CRASH] 
-[crash]: your memcpy does not behave well with NULL as both params with size
-Test code:
-	ft_memcpy(((void *)0), ((void *)0), 3);
-
-
+ft_memset:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
+ft_bzero:      [OK] [OK] [OK] [OK] 
+ft_memcpy:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_memccpy:    [MISSING]
-ft_memmove:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [CRASH] [OK] 
-[crash]: your memmove does not well with NULL as both parameters and size
-Test code:
-	ft_memmove(((void *)0), ((void *)0), 5);
-
-
+ft_memmove:    [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_memchr:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_memcmp:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
 ft_strlen:     [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] 
@@ -85,8 +65,8 @@ ft_lstadd_front: [OK] [OK] [OK]
 ft_lstsize:    [OK] [OK] 
 ft_lstlast:    [OK] [OK] 
 ft_lstadd_back:[OK] [OK] [OK] 
-ft_lstdelone:  [MISSING]
-ft_lstclear:   [MISSING]
-ft_lstiter:    [MISSING]
-ft_lstmap:     [MISSING]
+ft_lstdelone:  [OK] 
+ft_lstclear:   [OK] [OK] [OK] 
+ft_lstiter:    [OK] {protected}
+ft_lstmap:     [OK] {protected}
 ft_striteri:   [OK] [OK] {protected}
