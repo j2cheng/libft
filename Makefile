@@ -27,14 +27,16 @@ NAME	=	libft.a
 
 all		:	${NAME}
 
+#mandatory
 ${NAME}	:	${OBJS}
 			${ARRCS} ${NAME} ${OBJS}
 
-%.o : %.c
-	${GCC} ${CFLAGS} -I. -c $< -o ${<:.c=.o}
-
+#bonus
 bonus	: 	${BONUS_OBJS}
 			${ARRCS} ${NAME} ${BONUS_OBJS}
+
+%.o : %.c
+	${GCC} ${CFLAGS} -I. -c $< -o ${<:.c=.o}
 
 #remove files
 clean	:
