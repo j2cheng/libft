@@ -6,12 +6,12 @@ SRCS	=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strle
 			ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c\
 			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c 
 
-OBJS	=	${SRCS:.c=.o}
+OBJS	=	$(SRCS:.c=.o)
 
 #bonus
 BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
-BONUS_OBJS = ${BONUS_SRCS:%.c=%.o}
+BONUS_OBJS = $(BONUS_SRCS:%.c=%.o)
 
 #header
 INCLUDE	=	libft.h
@@ -25,24 +25,24 @@ CFLAGS	=	-Wall -Wextra -Werror
 
 NAME	=	libft.a
 
-all		:	${NAME}
+all		:	$(NAME)
 
 #mandatory
-${NAME}	:	${OBJS}
-			${ARRCS} ${NAME} ${OBJS}
+$(NAME)	:	$(OBJS)
+			$(ARRCS) $(NAME) $(OBJS)
 
 #bonus
-bonus	: 	${BONUS_OBJS}
-			${ARRCS} ${NAME} ${BONUS_OBJS}
+bonus	: 	$(BONUS_OBJS)
+			$(ARRCS) $(NAME) $(BONUS_OBJS)
 
 %.o : %.c
-	${GCC} ${CFLAGS} -I. -c $< -o ${<:.c=.o}
+	$(GCC) $(CFLAGS) -I. -c $< -o $(<:.c=.o)
 
 #remove files
 clean	:
-	rm -f ${OBJS} ${BONUS_OBJS}
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean	:	clean
-	rm -f ${NAME}
+	rm -f $(NAME)
 
 re		:	fclean all
